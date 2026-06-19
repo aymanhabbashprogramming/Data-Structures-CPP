@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="DataStructuresCPP.vcxproj" />
+  <Project Path="DataStructuresCPP.vcxproj" Id="1bc0e09e-8f47-4387-b4bd-cae30950dff4" />
 </Solution>
