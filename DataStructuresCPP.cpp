@@ -21,22 +21,12 @@ int main()
     MydblLinkedList.InsertAtBeginning(2);
     MydblLinkedList.InsertAtBeginning(1);
 
+    cout << "The list before reversing is: ";
     MydblLinkedList.PrintList();
 
-    cout << "\n\nSize of the list is: " << MydblLinkedList.Size() << "\n";
-
-    if (MydblLinkedList.IsEmpty())
-        cout << "\n\nYes, List is Empty.\n";
-    else
-        cout << "\n\nNo, List is not Empty.\n";
- 
-    MydblLinkedList.Clear();
-    cout << "\nSize of the list after Clear is: " << MydblLinkedList.Size() << "\n";
-    if (MydblLinkedList.IsEmpty())
-        cout << "\n\nYes, List is Empty.\n";
-    else
-        cout << "\n\nNo, List is not Empty.\n";
-
+    MydblLinkedList.Reverse();
+    cout << "\nThe list after reversing is: ";
+    MydblLinkedList.PrintList();
 
     return 0;
 }
