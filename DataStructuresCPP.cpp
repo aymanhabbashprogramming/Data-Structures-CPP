@@ -23,7 +23,10 @@ int main()
 
     MydblLinkedList.PrintList();
 
-    cout << "Item at index 7: " << MydblLinkedList.GetItem(7) << endl;
+    MydblLinkedList.UpdateItem(4, 100);
+
+    cout << "After updating item at index 4: " << endl;
+    MydblLinkedList.PrintList();
 
     return 0;
 }
