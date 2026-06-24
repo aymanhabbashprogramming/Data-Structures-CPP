@@ -7,9 +7,9 @@ int main()
 {
     clsDblLinkedList <int> MydblLinkedList;
 
-  
-    cout << "[1] Inserting elements at the beginning.\n" << endl;
-
+ 
+    MydblLinkedList.InsertAtBeginning(12);
+    MydblLinkedList.InsertAtBeginning(11);
     MydblLinkedList.InsertAtBeginning(10);
     MydblLinkedList.InsertAtBeginning(9);
     MydblLinkedList.InsertAtBeginning(8);
@@ -21,10 +21,12 @@ int main()
     MydblLinkedList.InsertAtBeginning(2);
     MydblLinkedList.InsertAtBeginning(1);
 
+    cout << "Elements:\n";
+
     MydblLinkedList.PrintList();
 
     MydblLinkedList.InsertAfter(8, 33);
-    cout << "After Insert 33 After Index 8\n";
+    cout << "\nAfter Insert 33 After Index 8\n";
 
     MydblLinkedList.PrintList();
 
