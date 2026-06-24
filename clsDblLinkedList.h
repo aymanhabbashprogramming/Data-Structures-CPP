@@ -240,6 +240,17 @@ public:
         }
     }
 
+    bool InsertAfter(int index, T newValue) {
+        Node* node = GetNode(index);
 
+        if (node != NULL)
+        {
+            InsertAfter(node, newValue);
+            return true;
+        }
+
+        return false;
+
+    }
 
 };
