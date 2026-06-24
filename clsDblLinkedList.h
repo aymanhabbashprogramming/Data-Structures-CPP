@@ -194,4 +194,22 @@ public:
         head = NewHead;
     }
 
+    Node* GetNode(int index) {
+
+        if (index<0 || index > _Size - 1)
+        {
+            return nullptr;
+        }
+
+        Node* current = head;
+
+
+        while (current != nullptr && index > 0) {
+            current = current->next;
+            index--;
+        }
+
+        return current;
+    }
+
 };
