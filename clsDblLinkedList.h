@@ -177,4 +177,21 @@ public:
         }
     }
 
+    void Reverse() {
+
+        Node* current = head;
+        Node* temp = nullptr;
+        Node* NewHead = nullptr;
+
+        while (current != nullptr) {
+
+            temp = current->next;
+            current->next = current->prev;
+            current->prev = temp;
+            NewHead = current;
+            current = temp;
+        }
+        head = NewHead;
+    }
+
 };
