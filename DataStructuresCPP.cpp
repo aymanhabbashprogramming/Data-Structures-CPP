@@ -7,7 +7,7 @@ int main()
 {
     clsDblLinkedList <int> MydblLinkedList;
 
-    // 1. Inserting Elements
+  
     cout << "[1] Inserting elements at the beginning.\n" << endl;
 
     MydblLinkedList.InsertAtBeginning(10);
@@ -25,6 +25,10 @@ int main()
 
     cout << "\n\nSize of the list is: " << MydblLinkedList.Size() << "\n";
 
+    if (MydblLinkedList.IsEmpty())
+        cout << "\n\nYes, List is Empty.\n";
+    else
+        cout << "\n\nNo, List is not Empty.\n";
  
 
     return 0;
