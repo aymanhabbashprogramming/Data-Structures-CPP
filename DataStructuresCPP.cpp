@@ -23,16 +23,7 @@ int main()
 
     MydblLinkedList.PrintList();
 
-    clsDblLinkedList <int>::Node* indexNode = MydblLinkedList.GetNode(2);
-
-    if (indexNode == nullptr)
-    {
-        cout << "the node at index 2 is not found" << endl;
-    }
-    else
-    {
-        cout << "the node at index 2 is: " << indexNode->value << endl;
-    }
+    cout << "Item at index 7: " << MydblLinkedList.GetItem(7) << endl;
 
     return 0;
 }
