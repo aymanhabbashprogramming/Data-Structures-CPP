@@ -21,12 +21,18 @@ int main()
     MydblLinkedList.InsertAtBeginning(2);
     MydblLinkedList.InsertAtBeginning(1);
 
-    cout << "The list before reversing is: ";
     MydblLinkedList.PrintList();
 
-    MydblLinkedList.Reverse();
-    cout << "\nThe list after reversing is: ";
-    MydblLinkedList.PrintList();
+    clsDblLinkedList <int>::Node* indexNode = MydblLinkedList.GetNode(2);
+
+    if (indexNode == nullptr)
+    {
+        cout << "the node at index 2 is not found" << endl;
+    }
+    else
+    {
+        cout << "the node at index 2 is: " << indexNode->value << endl;
+    }
 
     return 0;
 }
