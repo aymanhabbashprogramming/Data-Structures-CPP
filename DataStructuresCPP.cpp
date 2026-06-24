@@ -23,9 +23,9 @@ int main()
 
     MydblLinkedList.PrintList();
 
-    MydblLinkedList.UpdateItem(4, 100);
+    MydblLinkedList.InsertAfter(8, 33);
+    cout << "After Insert 33 After Index 8\n";
 
-    cout << "After updating item at index 4: " << endl;
     MydblLinkedList.PrintList();
 
     return 0;
