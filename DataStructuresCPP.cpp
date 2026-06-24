@@ -25,6 +25,26 @@ int main()
 	MyQueue.pop();
 	MyQueue.pop();
 	MyQueue.Print();
+	cout << "\n[6] Get Item at index 3:  " << MyQueue.GetItem(3) << endl;
+	cout << "\n[7] Reversing the queue: ";
+	MyQueue.Reverse();
+	MyQueue.Print();
+	cout << "\n[8] Updating Item at index 2 to 100: ";
+	MyQueue.UpdateItem(2, 100);
+	MyQueue.Print();
+	cout << "\n[9] Inserting 200 after index 2: ";
+	MyQueue.InsertAfter(2, 200);
+	MyQueue.Print();
+	cout << "\n[10] Inserting 5 at the front of the queue: ";
+	MyQueue.InsertAtFront(5);
+	MyQueue.Print();
+	cout << "\n[11] Inserting 500 at the back of the queue: ";
+	MyQueue.InsertAtBack(500);
+	MyQueue.Print();
+	MyQueue.Clear();
+	cout << "\n[12] After clearing the queue: ";
+	MyQueue.Print();
+
 	cout << endl;
 	return 0;
 }
