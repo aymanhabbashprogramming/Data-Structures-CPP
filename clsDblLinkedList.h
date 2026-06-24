@@ -2,10 +2,12 @@
 #include <iostream>
 using namespace std;
 
-
 template <class T>
 class clsDblLinkedList
 {
+
+protected:
+    int _Size = 0;
 
 public:
 
@@ -32,7 +34,7 @@ public:
             head->prev = newNode;
         }
         head = newNode;
-
+        _Size++;
 
     }
 
@@ -46,7 +48,7 @@ public:
             Current = Current->next;
         }
         cout << "\n";
-
+        delete Current;
 
     }
 
@@ -76,7 +78,7 @@ public:
             current->next->prev = newNode;
         }
         current->next = newNode;
-
+        _Size++;
 
     }
 
@@ -97,7 +99,7 @@ public:
             current->next = newNode;
             newNode->prev = current;
         }
-
+        _Size++;
 
     }
 
@@ -117,7 +119,7 @@ public:
         }
         delete NodeToDelete;
 
-
+        _Size--;
     }
 
     void DeleteFirstNode()
@@ -132,7 +134,7 @@ public:
             head->prev = NULL;
         }
         delete temp;
-
+        _Size--;
     }
 
     void DeleteLastNode() {
@@ -156,7 +158,14 @@ public:
         Node* temp = current->next;
         current->next = NULL;
         delete temp;
-
+        _Size--;
     }
+
+    int Size()
+    {
+        return _Size;
+    }
+
+
 
 };
