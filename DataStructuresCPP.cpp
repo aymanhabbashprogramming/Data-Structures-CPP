@@ -1,49 +1,55 @@
 #include <iostream>
 #include "clsDblLinkedList.h"
 #include"clsMyQueue.h"
+#include"clsMyStack.h"
 
 using namespace std;
 
 int main()
 {
-	clsMyQueue<int> MyQueue;
+	clsMyStack<int> MyStack;
+	MyStack.Push(10);
+	MyStack.Push(20);
+	MyStack.Push(30);
+	MyStack.Push(40);
+	MyStack.Push(50);
 
-	MyQueue.push(15);
-	MyQueue.push(25);
-	MyQueue.push(35);
-	MyQueue.push(45);
-	MyQueue.push(55);
-	MyQueue.push(65);
+	MyStack.Print();
+	cout << "Stack size: " << MyStack.size() << endl;
+	cout << "\nStack Top: " << MyStack.Top() << endl;
+	cout << "\nStack Bottom: " << MyStack.Bottom() << endl;
 
-	cout << "[1] Queue elements:  ";
-	MyQueue.Print();
+	MyStack.pop();
+	cout << "\nStack after Pop: ";
+	MyStack.Print();
 
-	cout << "\n[2] Queue size    :  " << MyQueue.size() << endl;
-	cout << "\n[3] Queue front   :  " << MyQueue.front() << endl;
-	cout << "\n[4] Queue back    :  " << MyQueue.back() << endl;
-	cout << "\n[5] Poping 2 elements from the queue: ";
-	MyQueue.pop();
-	MyQueue.pop();
-	MyQueue.Print();
-	cout << "\n[6] Get Item at index 3:  " << MyQueue.GetItem(3) << endl;
-	cout << "\n[7] Reversing the queue: ";
-	MyQueue.Reverse();
-	MyQueue.Print();
-	cout << "\n[8] Updating Item at index 2 to 100: ";
-	MyQueue.UpdateItem(2, 100);
-	MyQueue.Print();
-	cout << "\n[9] Inserting 200 after index 2: ";
-	MyQueue.InsertAfter(2, 200);
-	MyQueue.Print();
-	cout << "\n[10] Inserting 5 at the front of the queue: ";
-	MyQueue.InsertAtFront(5);
-	MyQueue.Print();
-	cout << "\n[11] Inserting 500 at the back of the queue: ";
-	MyQueue.InsertAtBack(500);
-	MyQueue.Print();
-	MyQueue.Clear();
-	cout << "\n[12] After clearing the queue: ";
-	MyQueue.Print();
+	MyStack.Reverse();
+	cout << "\nStack after Reverse: ";
+	MyStack.Print();
+
+	MyStack.UpdateItem(2, 25);
+	cout << "\nStack after UpdateItem(2, 25): ";
+	MyStack.Print();
+
+	MyStack.InsertAfter(2, 15);
+	cout << "\nStack after InsertAfter(2, 15): ";
+	MyStack.Print();
+
+	MyStack.InsertAtFront(5);
+	cout << "\nStack after InsertAtFront(5): ";
+	MyStack.Print();
+
+	MyStack.InsertAtBack(55);
+	cout << "\nStack after InsertAtBack(55): ";
+	MyStack.Print();
+
+	MyStack.pop();
+	cout << "\nStack after Pop: ";
+	MyStack.Print();
+
+	MyStack.Clear();
+	cout << "\nStack after Clear: ";
+	MyStack.Print();
 
 	cout << endl;
 	return 0;
