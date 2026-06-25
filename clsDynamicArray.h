@@ -160,4 +160,26 @@ public:
 		return DeleteItemAt(_Size - 1);
 	}
 
+	int Find(T value) {
+
+		for (int i = 0; i < _Size; i++)
+		{
+			if (OriginalArray[i] == value) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	bool DeleteItem(T value) {
+
+		int index = Find(value);
+		if (index == -1)
+		{
+			return false;
+		}
+		return DeleteItemAt(index);
+		return true;
+	}
+
 };
