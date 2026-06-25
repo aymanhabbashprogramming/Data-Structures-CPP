@@ -16,18 +16,8 @@ int main()
 	arr.SetItem(4, 50);
 	arr.PrintList();
 
-	cout << "\nis empty: " << arr.IsEmpty() << endl;
-
-	cout << "size: " << arr.size() << endl;
-
-	cout << "\nGet item at index 2: " << arr.GetItem(2) << endl;
-
-	arr.Reverse();
-	cout << "\nReversed array: ";
-	arr.PrintList();
-
-	arr.clear();
-	cout << "\nCleared array: ";
+	arr.DeleteItemAt(0);
+	cout << "\nArray after deleting item at index 0: ";
 	arr.PrintList();
 
 
