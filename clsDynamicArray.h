@@ -208,4 +208,29 @@ public:
 		return true;
 	}
 
+	void InsertAtBeginning(T value) {
+		InsertAt(0, value);
+	}
+
+	bool InsertBefore(int index, T value)
+	{
+		if (index < 1)
+			return InsertAt(0, value);
+		else
+			return InsertAt(index - 1, value);
+	}
+
+	bool InsertAfter(int index, T value) {
+		if (index < 0) {
+			return InsertAt(0, value);
+		}
+
+		return InsertAt(index + 1, value);
+	}
+
+	void InsertAtEnd(T value) {
+		InsertAt(_Size, value);
+	}
+
+
 };
