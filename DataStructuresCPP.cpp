@@ -20,8 +20,14 @@ int main()
 
 	cout << "size: " << arr.size() << endl;
 
-	arr.Resize(10);
-	cout << "\nsize after resize to bigger: " << arr.size() << endl;
+	cout << "\nGet item at index 2: " << arr.GetItem(2) << endl;
+
+	arr.Reverse();
+	cout << "\nReversed array: ";
+	arr.PrintList();
+
+	arr.clear();
+	cout << "\nCleared array: ";
 	arr.PrintList();
 
 
