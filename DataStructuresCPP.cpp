@@ -14,12 +14,15 @@ int main()
 	arr.SetItem(2, 30);
 	arr.SetItem(3, 40);
 	arr.SetItem(4, 50);
-	arr.Print();
+	arr.PrintList();
 
 	cout << "\nis empty: " << arr.IsEmpty() << endl;
 
 	cout << "size: " << arr.size() << endl;
 
+	arr.Resize(10);
+	cout << "\nsize after resize to bigger: " << arr.size() << endl;
+	arr.PrintList();
 
 
 	cout << endl;
