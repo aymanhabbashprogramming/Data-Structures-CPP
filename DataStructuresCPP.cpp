@@ -1,54 +1,67 @@
 #include <iostream>
-#include "clsDblLinkedList.h"
-#include "clsMyQueue.h"
-#include "clsMyStack.h"
-#include "clsDynamicArray.h"
+#include "clsMyQueueArr.h"
 
 using namespace std;
 
 int main()
 {
-    clsDynamicArray<int> arr(7);
 
-    arr.SetItem(0, 10);
-    arr.SetItem(1, 20);
-    arr.SetItem(2, 30);
-    arr.SetItem(3, 40);
-    arr.SetItem(4, 50);
-    arr.SetItem(5, 60);
-    arr.SetItem(6, 70);
+    clsMyQueueArr <int> MyQueue;
 
-    cout << "Initial Array:\n";
-    arr.PrintList();
+    MyQueue.push(10);
+    MyQueue.push(20);
+    MyQueue.push(30);
+    MyQueue.push(40);
+    MyQueue.push(50);
 
-    cout << "\n\nIs Empty: " << arr.IsEmpty() << endl;
-    cout << "Size: " << arr.size() << endl;
 
-    arr.InsertAtBeginning(35);
+    cout << "\nQueue: \n";
+    MyQueue.Print();
 
-    cout << "\n\nAfter InsertAtBeginning(35):\n";
-    cout << "Size: " << arr.size() << endl;
-    arr.PrintList();
+    cout << "\nQueue Size: " << MyQueue.Size();
+    cout << "\nQueue Front: " << MyQueue.front();
+    cout << "\nQueue Back: " << MyQueue.back();
 
-    arr.InsertBefore(0, 25);
+    MyQueue.pop();
 
-    cout << "\n\nAfter InsertBefore(0, 25):\n";
-    cout << "Size: " << arr.size() << endl;
-    arr.PrintList();
+    cout << "\n\nQueue after pop() : \n";
+    MyQueue.Print();
 
-    arr.InsertAfter(5, 45);
 
-    cout << "\n\nAfter InsertAfter(5, 45):\n";
-    cout << "Size: " << arr.size() << endl;
-    arr.PrintList();
+    cout << "\n\n Item(2) : " << MyQueue.GetItem(2);
 
-    arr.InsertAtEnd(75);
 
-    cout << "\n\nAfter InsertAtEnd(75):\n";
-    cout << "Size: " << arr.size() << endl;
-    arr.PrintList();
+    MyQueue.Reverse();
+    cout << "\n\nQueue after reverse() : \n";
+    MyQueue.Print();
 
-    cout << endl;
 
-    return 0;
+    MyQueue.UpdateItem(2, 600);
+    cout << "\n\nQueue after updating Item(2) to 600 : \n";
+    MyQueue.Print();
+
+
+    MyQueue.InsertAfter(2, 800);
+    cout << "\n\nQueue after Inserting 800 after Item(2) : \n";
+    MyQueue.Print();
+
+
+
+    MyQueue.InsertAtFront(1000);
+    cout << "\n\nQueue after Inserting 1000 at front: \n";
+    MyQueue.Print();
+
+
+    MyQueue.InsertAtBack(2000);
+    cout << "\n\nQueue after Inserting 2000 at back: \n";
+    MyQueue.Print();
+
+
+    MyQueue.Clear();
+    cout << "\n\nQueue after Clear(): \n";
+    MyQueue.Print();
+
+    system("pause>0");
+
+
 }
