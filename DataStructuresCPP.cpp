@@ -16,20 +16,11 @@ int main()
 	arr.SetItem(4, 50);
 	arr.PrintList();
 
-	cout << "size: " << arr.size() << endl;
+	cout << "\nsize: " << arr.size() << endl;
 
-	int index = arr.Find(20);
-	if (index == -1)
-	{
-		cout << "Item not found" << endl;
-	}
-	else
-	{
-		cout << "Item found at index: " << index << endl;
-	}
+	arr.InsertAt(2, 35);
+	cout << "After InsertAt(2, 35): ";
 
-	arr.DeleteItem(30);
-	cout << "After deleting 30: ";
 	arr.PrintList();
 	cout << "\nsize: " << arr.size() << endl;
 
