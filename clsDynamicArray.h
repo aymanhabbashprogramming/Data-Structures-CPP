@@ -6,13 +6,14 @@ template<typename T>
 class clsDynamicArray
 {
 
-private:
+protected:
 	int _Size = 0;
+	T* _TempArray;
 
 public:
 	T* OriginalArray;
 
-	clsDynamicArray(int size)
+	clsDynamicArray(int size = 0)
 	{
 		if (size < 0)
 		{
@@ -46,12 +47,38 @@ public:
 		return _Size;
 	}
 
-	void Print() {
+	void PrintList() {
 
 		for (int i = 0; i <= _Size - 1; i++)
 		{
 			cout << OriginalArray[i] << " ";
 		}
+
+	}
+
+	void Resize(int NewSize = 0) {
+
+		if (NewSize < 0)
+		{
+			NewSize = 0;
+		}
+
+		_TempArray = new T[NewSize];
+
+		if (NewSize < _Size)
+		{
+			_Size = NewSize;
+		}
+
+
+		for (int i = 0; i < _Size; i++)
+		{
+			_TempArray[i] = OriginalArray[i];
+		}
+
+		_Size = NewSize;
+		delete[] OriginalArray;
+		OriginalArray = _TempArray;
 
 	}
 
